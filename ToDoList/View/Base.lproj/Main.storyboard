@@ -34,10 +34,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Todoey" id="PPf-i2-qDP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="4p4-cD-ZZF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="u7j-fg-bWH">
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="addButtonPressed:" destination="xBl-TW-atx" id="NgM-H7-6Mu"/>
+                                <action selector="addButtonPressed:" destination="xBl-TW-atx" id="Hw0-MR-g10"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -12,7 +12,7 @@
         <!--ToDoList-->
         <scene sceneID="KX6-EA-M2j">
             <objects>
-                <tableViewController id="x8C-wz-zVx" customClass="CategoryViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="x8C-wz-zVx" customClass="goToItems" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ud2-I8-wVb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="xBl-TW-atx" kind="show" identifier="goToItems" id="875-7L-jF5"/>
+                        <segue destination="xBl-TW-atx" kind="show" identifier="goToItems" id="FEJ-Cp-iVG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C0J-NV-RJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,15 +80,15 @@
                             <outlet property="delegate" destination="xBl-TW-atx" id="vDd-G5-leS"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Items" id="PPf-i2-qDP">
+                    <navigationItem key="navigationItem" title="Items" id="PPf-i2-qDP" customClass="todoItems" customModule="ToDoList" customModuleProvider="target">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="u7j-fg-bWH" customClass="addButtonPressed">
-                            <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="xBl-TW-atx" id="Hw0-MR-g10"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="auY-tJ-WGV" id="8iL-gf-D8f"/>
                         <outlet property="searchDisplayController" destination="auY-tJ-WGV" id="nu4-2u-vSt"/>
                     </connections>
                 </tableViewController>
@@ -101,8 +101,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dSv-tt-t7z" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="grJ-pe-lis">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="grJ-pe-lis">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
